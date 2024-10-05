@@ -3,6 +3,7 @@ const path=require('path');
 const cookieParser=require('cookie-parser');
 const connectMongo=require('./connection');
 const {authenicateUser}=require('./middlewares/auth');
+require('dotenv').config();
 
 
 
@@ -13,11 +14,11 @@ const userRouter=require('./routes/userRouter');
 
 
 const app=express();
-const PORT=8002;
+const PORT=process.env.PORT;
 
 
 //CONNECTION
-connectMongo('mongodb://127.0.0.1:27017/stylesustain');
+connectMongo(process.env.MONGODB_URL);
 
 
 //VIEW
