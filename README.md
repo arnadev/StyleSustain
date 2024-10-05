@@ -5,4 +5,4 @@ NOTE:
 
 -make sure to install all dependancies/modules via npm install
 
--the PORT and DBURL are present in the .env file as environment variables, set them as needed
+-the PORT and Datbase URL are present in the .env file as environment variables, set them as needed.
