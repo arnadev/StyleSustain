@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.table-container {
+    width: 80%;
+    overflow-x: auto;
+}
+
+.sleek-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.sleek-table th, .sleek-table td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+}
+
+.sleek-table th {
+    background-color: #007bff;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.sleek-table tr {
+    transition: background-color 0.3s ease;
+}
+
+.sleek-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.sleek-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.sleek-table th, .sleek-table td {
+    width: 20%; /* Each column takes 20% of the width */
+}
+
+.sleek-table td {
+    height: 60px; /* Set equal row height */
+}
+
+.join-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.times{
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+#location-sport {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 10px;
+    opacity: 1;
+    animation: breathe 3s infinite ease-in-out;
+    z-index: -1;
+}
+
+@keyframes breathe {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+#location-sport h1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#location-sport h1.location {
+    color: #007BFF;
+}
+
+#location-sport h1.sport {
+    color: #28a745;
+}
+
+a{
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+img{
+    height: 10vh;
+}
+
+a{
+    cursor: zoom-in;
+    cursor: -moz-zoom-in;
+}
+
+#home-btn{
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.delete{
+    height: 4vh;
+    cursor: pointer;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/additem.css">
+</head>
+<body>
+    <% if (locals.success) { %>
+     <div id="success-alert">Item Added Sucessfully</div>
+    <% } %>
+    <div class="container">
+    <h1>Add Item</h1>
+    
+        <form method="POST" action="/user/item" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="type">Apparel Image(optional)</label>
+                <input type="file" id="image" name="image" accept="image/*">
+            </div>
+
+            <div class="form-group">
+                <label for="type">Apparel Type</label>
+                <input type="text" id="type" name="apparelType" required placeholder="Apparel type..." required>
+            </div>
+            <div class="form-group">
+                <label for="size">Apparel Size</label>
+                <input type="size" id="size" name="apparelSize" required placeholder="Apparel size..." required>
+            </div>
+
+            <label for="role" class="form-group">Apparel Role</label>    
+            <div id="role-radios-div">
+            <input type="radio" id="role-male" class="role-radios" name="apparelRole" value="disposal" required>
+            <label for="role-male">Disposal</label>
+            
+            <input type="radio" id="role-female" class="role-radios" name="apparelRole" value="donation" required>
+            <label for="role-female">Donation</label>
+            
+            <input type="radio" id="role-other" class="role-radios" name="apparelRole" value="recycling" required>
+            <label for="role-other">Recycling</label>
+            </div>
+
+            <button type="submit" class="btn" id="submit-button">ADD ITEM!</button>
+            <% if (locals.err) { %>
+                <p class="error"><%= err %></p>
+            <% } %>
+
+        </form>
+        </div>
+        <a href="/home"><button class="btn" id="home-btn">Home</button></a>
+        <script src="/js/additem.js"></script>
+</body>
+</html>

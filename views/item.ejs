@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/item.css">
+</head>
+<body>
+    <div class="table-container">
+        <table class="sleek-table">
+    <thead>
+        <tr>
+            <th>No.</th>
+            <th>Apparel Type</th>
+            <th>Apparel Size</th>
+            <th>Apparel Role</th>
+            <th>Apparel Image</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% items.forEach((item,idx) => { %>
+            <tr>
+         <td><%= idx+1 %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="/media/delete-icon.png" class="delete" id="<%= item._id %>"></td>
+         <td><%= item.apparelType %></td>
+         <td><%= item.apparelSize%></td>
+         <td><%= item.apparelRole %></td>
+         <td><a href=<%= `/images/${item.imageName}` %> target='_blank'><img src=<%= `/images/${item.imageName}` %>></a></td>
+        </tr>
+
+        <% }) %>
+    </tbody>
+    </table>
+    </div>
+    <a href="/home"><button class="btn" id="home-btn">Home</button></a>
+    <script src="/js/item.js"></script>
+</body>
+</html>
